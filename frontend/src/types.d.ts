@@ -1,8 +1,23 @@
+export interface ArrayIng {
+	name: string;
+	col: string;
+}
+
 export interface RegisterMutation {
 	username: string;
 	password: string;
 	displayName: string;
 	avatar: File | null;
+}
+
+export interface Ingredient{
+	user: string;
+	name: string;
+	image: string;
+	recept: string;
+	_id: string;
+	isPublished: boolean;
+	ingredients: ArrayIng[];
 }
 
 export interface User {

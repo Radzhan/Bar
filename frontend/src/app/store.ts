@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from "redux-persist";
 import storage from "redux-persist/es/storage";
 import { usersReducer } from "../features/user/userSlice";
+import {menuReducer} from '../store/menuSlice';
 
 const usersPersistConfig = {
 	key: "menu:users",
@@ -10,6 +11,7 @@ const usersPersistConfig = {
 };
 
 const rootReducer = combineReducers({
+	menu: menuReducer,
 	users: persistReducer(usersPersistConfig, usersReducer),
 });
 

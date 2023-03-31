@@ -1,8 +1,9 @@
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import config from './config';
-import * as cors from 'cors';
-import * as express from 'express';
+import cors from 'cors';
+import express from 'express';
 import userRouter from './router/user';
+import IngredientRouter from './router/ingredient';
 
 const app = express();
 const port = 8000;
@@ -10,6 +11,7 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 app.use("/users", userRouter);
+app.use("/ingredients", IngredientRouter);
 
 const run = async () => {
 	mongoose.set("strictQuery", false);
