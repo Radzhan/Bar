@@ -7,3 +7,8 @@ export interface IUser {
 	googleId?: string;
 	avatar: string;
 }
+
+export interface Ingredient {
+	name: string;
+	col: string;
+}
