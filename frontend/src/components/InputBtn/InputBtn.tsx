@@ -41,6 +41,7 @@ const InputBtn: React.FC<Props> = ({onChange, name, label}) => {
 			<Grid container direction="row" spacing={2} alignItems="center">
 				<Grid item xs>
 					<TextField
+						required
 						disabled
 						label={label}
 						value={filename}

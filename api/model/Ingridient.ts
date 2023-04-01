@@ -17,10 +17,7 @@ const IngredientSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	image: {
-		type: String,
-		required: true,
-	},
+	image: String,
 	recept: {
 		type: String,
 		required: true,

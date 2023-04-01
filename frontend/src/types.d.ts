@@ -20,6 +20,14 @@ export interface Ingredient{
 	ingredients: ArrayIng[];
 }
 
+export interface IngreMutation {
+	user: string;
+	name: string;
+	image: File | null;
+	recept: string;
+	ingredients: ArrayIng[];
+}
+
 export interface User {
 	_id: string;
 	password: string;

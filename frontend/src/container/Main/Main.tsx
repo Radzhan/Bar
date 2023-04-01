@@ -17,12 +17,6 @@ const Main = () => {
 		requestArtist().catch(console.error);
 	}, [requestArtist]);
 
-	// const onDelete = async (num: string) => {
-	// 	await dispatch(deleteArtist(num));
-	// 	await dispatch(getArtists());
-	// };
-
-
 	const createCard = arrayWithIngre.map((element) => {
 		if (user?.role === 'user' || user === null) {
 			if (element.isPublished) {

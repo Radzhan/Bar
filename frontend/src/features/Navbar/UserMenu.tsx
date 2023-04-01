@@ -23,16 +23,8 @@ const UserMenu: React.FC<Props> = ({ user }) => {
 		setAnchorEl(null);
 	};
 
-	const navigateClick = () => {
-		navigate("/trackHistory");
-	};
-
 	const handleLogout = () => {
 		dispatch(logout());
-	};
-
-	const navigateToCreate = (arg: string) => {
-		navigate('/add' + arg)
 	}
 
 	let cardImage =
@@ -42,6 +34,10 @@ const UserMenu: React.FC<Props> = ({ user }) => {
 		cardImage = user.avatar;
 	} else if (!user.googleId) {
 		cardImage = apiURL + '/' + user.avatar;
+	}
+
+	const myCocteil = (arg: string) => {
+		navigate('/' + arg)
 	}
 
 	return (
@@ -55,11 +51,9 @@ const UserMenu: React.FC<Props> = ({ user }) => {
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
 			>
-				<MenuItem onClick={navigateClick}>Track History</MenuItem>
 				<MenuItem onClick={handleLogout}> Logout </MenuItem>
-				<MenuItem onClick={() => navigateToCreate('Album')}> Add Album </MenuItem>
-				<MenuItem onClick={() => navigateToCreate('Artist')}> Add Artist </MenuItem>
-				<MenuItem onClick={() => navigateToCreate('Track')}> Add Track </MenuItem>
+				<MenuItem onClick={() => myCocteil('coctails')}> My Cocteil </MenuItem>
+				<MenuItem onClick={() => myCocteil('addNew')}> Add new Cocktail </MenuItem>
 			</Menu>
 		</>
 	);

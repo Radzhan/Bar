@@ -101,6 +101,7 @@ const Register = () => {
 								label="Username"
 								name="username"
 								autoComplete="new-username"
+								required
 								value={state.username}
 								onChange={inputChangeHandler}
 								error={Boolean(getFieldError("username"))}
@@ -109,6 +110,7 @@ const Register = () => {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
+								required
 								label="Display Name"
 								name="displayName"
 								autoComplete="new-displayName"
@@ -120,6 +122,7 @@ const Register = () => {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
+								required
 								name="password"
 								label="Password"
 								type="password"
